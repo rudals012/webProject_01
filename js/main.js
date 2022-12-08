@@ -15,6 +15,20 @@ btnTop.addEventListener('click' , e =>{
 window;addEventListener('scroll' , ()=>{
     let scroll = document.querySelector('html').scrollTop;
     console.log(scroll);
+
+    // sections
+    let sections = document.querySelectorAll(".section");
+    console.log(sections);
+    for(let i=0;i<sections.length;i++){
+        if(scroll > 300){
+            sections[0].classList.add("on");
+        }if(scroll > 1200){
+            sections[1].classList.add("on");
+        }if(scroll > 1600){
+            sections[2].classList.add("on");
+        }
+    }
+
     if(scroll <= 0){
         btnTop.classList.remove("on","ab");
     }else if(scroll > 2700){
@@ -23,6 +37,8 @@ window;addEventListener('scroll' , ()=>{
         btnTop.classList.remove("ab");
         btnTop.classList.add("on");
     }
+
+
 })
 
 /* 주메뉴 */
@@ -172,4 +188,3 @@ function activation(index,list){
 }
     
 });
-
