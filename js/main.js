@@ -1,17 +1,4 @@
 // main.js
-window.addEventListener('load', ()=> {
-    // top 버튼
-const btnTop = document.querySelector('a.btn_top');
-
-btnTop.addEventListener('click' , e =>{
-    e.preventDefault();
-    window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    });
-});
-
 window;addEventListener('scroll' , ()=>{
     let scroll = document.querySelector('html').scrollTop;
     console.log(scroll);
@@ -37,9 +24,20 @@ window;addEventListener('scroll' , ()=>{
         btnTop.classList.remove("ab");
         btnTop.classList.add("on");
     }
-
-
 })
+
+window.addEventListener('load', ()=> {
+    // top 버튼
+const btnTop = document.querySelector('a.btn_top');
+
+btnTop.addEventListener('click' , e =>{
+    e.preventDefault();
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+});
 
 /* 주메뉴 */
 var gnbMenu = document.querySelectorAll(".gnb>ul>li");
